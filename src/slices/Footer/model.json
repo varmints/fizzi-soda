@@ -1,0 +1,26 @@
+{
+  "id": "text_in_circle",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "TextInCircle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "text_in_circle": {
+          "type": "Text",
+          "config": {
+            "label": "Text in circle",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

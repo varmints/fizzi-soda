@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text_in_circle": {
+				"__TYPE__": "FieldContent",
+				"value": "perfectly",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

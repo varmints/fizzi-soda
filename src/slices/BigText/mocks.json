@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"big_text": {
+				"__TYPE__": "FieldContent",
+				"value": "steam",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
