@@ -11,7 +11,10 @@ export type TextInCircleProps = SliceComponentProps<Content.TextInCircleSlice>;
  * Component for "TextInCircle" Slices.
  */
 const TextInCircle = ({ slice }: TextInCircleProps): JSX.Element => {
-  const textLength = 2 * Math.PI * 69;
+  const cx = 100;
+  const cy = 100;
+  const r = 84;
+  const textLength = 2 * Math.PI * r;
 
   return (
     <section
@@ -31,15 +34,23 @@ const TextInCircle = ({ slice }: TextInCircleProps): JSX.Element => {
               aria-labelledby="circle-text"
             >
               <title id="circle-text">{slice.primary.text_in_circle}</title>
-              <defs>
-                <circle id="circlePath" cx="100" cy="100" r="69" />
-              </defs>
+
+              <path
+                id="circlePath"
+                d={`
+                  M ${cx} ${cy}
+                  m ${r}, 0
+                  a ${r},${r} 0 1,0 ${-r * 2},0
+                  a ${r},${r} 0 1,0 ${r * 2},0
+                `}
+              />
+
               <circle cx="100" cy="100" r="100" fill="#FFFCFA" />
               <g>
                 <use xlinkHref="#circlePath" fill="none" />
                 <text
                   fill="#1A871D"
-                  className="origin-center animate-spin-slow text-3xl font-bold"
+                  className="origin-center animate-spin-slow text-4xl font-bold"
                   textLength={textLength}
                   lengthAdjust="spacing"
                 >
